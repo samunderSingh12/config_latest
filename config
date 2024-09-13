@@ -1,0 +1,45 @@
+# Newsboat Color Configuration
+
+# Color scheme
+color background         default   default
+color listnormal         color244  default
+color listnormal_unread  color2    default
+color listfocus          color236  color12
+color listfocus_unread   color236  color10
+color info               color12   color236
+color article            default   default
+
+# Highlights
+highlight article "^(Title):.*$" blue default
+highlight article "https?://[^ ]+" red default
+highlight article "\\[image\\ [0-9]+\\]" green default
+
+# Format of the dates shown in the article list
+datetime-format "%Y-%m-%d"
+
+# Custom keybindings
+bind-key j down
+bind-key k up
+bind-key J next-feed
+bind-key K prev-feed
+bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+bind-key l open
+bind-key h quit
+bind-key a toggle-article-read
+bind-key n next-unread
+bind-key N prev-unread
+bind-key D pb-download
+
+# Other UI settings
+show-read-feeds no
+feed-sort-order unreadarticlecount-asc
+
+# Article list format
+articlelist-format "%4i %f %D  %?T?|%-17T| ?%t"
+
+# Display options
+display-article-progress yes
+text-width 80
